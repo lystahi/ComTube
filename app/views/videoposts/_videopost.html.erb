@@ -1,0 +1,11 @@
+<li id="videopost-<%= videopost.id %>">
+  <span class="user"><%= link_to videopost.user.name, videopost.user %></span>
+  <span class="content"><%= get_video_iframe(videopost.content) %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(videopost.created_at) %> ago.
+    <% if current_user?(videopost.user) %>
+      <%= link_to "delete", videopost, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>
