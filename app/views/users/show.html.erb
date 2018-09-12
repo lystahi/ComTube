@@ -1,15 +1,19 @@
-<% provide(:title, current_user.name) %>
+<% provide(:title, @user.name) %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        <%= current_user.name %>
+        <%= @user.name %>
       </h1>
+    </section>
+    <section class="stats">
+      <%= render 'shared/stats' %>
     </section>
   </aside>
   <div class="col-md-8">
-    <% if current_user.videoposts.any? %>
-      <h3>Videoposts (<%= current_user.videoposts.count %>)</h3>
+    <%= render 'follow_form' if user_signed_in? %>
+    <% if @user.videoposts.any? %>
+      <h3>Videoposts (<%= @user.videoposts.count %>)</h3>
       <ol class="videoposts">
         <%= render partial: "videoposts/videopost", collection: @videoposts %>
       </ol>

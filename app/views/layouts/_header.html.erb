@@ -6,7 +6,7 @@
         <li><%= link_to "ホーム",   root_path %></li>
         <li><%= link_to "ヘルプ",   help_path %></li>
         <% if user_signed_in? %>
-          <li><strong><%= link_to current_user.username, '#' %></strong></li>
+          <li><%= link_to "ユーザー", users_path %></li>
           <li><%= link_to 'プロフィール変更', edit_user_registration_path %><li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %><li>
         <% else %>
