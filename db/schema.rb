@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_11_221524) do
+ActiveRecord::Schema.define(version: 2018_09_12_013621) do
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,10 +35,21 @@ ActiveRecord::Schema.define(version: 2018_09_11_221524) do
     t.string "provider"
     t.string "uid"
     t.string "username"
+    t.string "name"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+  end
+
+  create_table "videoposts", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "link"
+    t.index ["user_id", "created_at"], name: "index_videoposts_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_videoposts_on_user_id"
   end
 
 end
