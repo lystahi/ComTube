@@ -1,0 +1,2 @@
+module VideopostsHelper
+end
