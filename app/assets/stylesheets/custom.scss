@@ -270,6 +270,15 @@ input {
       padding: 5px 0;
     }
   }
+  .like-btn {
+    float: right;
+    color: #8899a6;
+  }
+
+  .like-btn-unlike {
+    float: right;
+    color: red;
+  }
   .timestamp {
     color: $gray-light;
     display: block;
@@ -294,4 +303,34 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.user-tabs {
+  list-style: none;
+  overflow: hidden;
+}
+
+.user-tabs {
+  margin-top: 40px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.user-tabs li {
+  float: left;
+}
+
+.user-tabs li.active {
+  border-bottom: 2px solid #3ecdc6;
+}
+
+.user-tabs li.active a {
+  color: #57575f;
+}
+
+.user-tabs a {
+  display: inline-block;
+  padding: 16px 30px;
+  color: #afb6bf;
 }

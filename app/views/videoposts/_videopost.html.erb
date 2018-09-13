@@ -1,6 +1,17 @@
 <li id="videopost-<%= videopost.id %>">
   <span class="user"><%= link_to videopost.user.name, videopost.user %></span>
   <span class="content"><%= get_video_iframe(videopost.content) %></span>
+  <% if Like.find_by(user_id: current_user.id, videopost_id: videopost.id) %>
+    <%= link_to("/likes/#{videopost.id}/destroy", {method: "post"}) do %>
+      <span class="fa fa-heart like-btn-unlike"></span>
+    <% end %>
+  <% else %>
+    <%= link_to("/likes/#{videopost.id}/create", {method: "post"}) do %>
+      <span class="fa fa-heart like-btn"></span>
+    <% end %>
+  <% end %>
+  <%= @likes_count %>
+
   <span class="timestamp">
     Posted <%= time_ago_in_words(videopost.created_at) %> ago.
     <% if current_user?(videopost.user) %>
