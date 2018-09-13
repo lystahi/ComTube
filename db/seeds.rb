@@ -10,3 +10,23 @@ User.create!(name:  "Example User",
              email: "example@example.com",
              password:              "foobar",
              password_confirmation: "foobar")
+
+User.create!(name:  "Ayano",
+            email: "ayano@example.com",
+            password:              "foobar",
+            password_confirmation: "foobar")
+
+User.create!(name:  "Wataru",
+            email: "wataru@example.com",
+            password:              "foobar",
+            password_confirmation: "foobar")
+
+User.create!(name:  "Jun",
+            email: "jun@example.com",
+            password:              "foobar",
+            password_confirmation: "foobar")
+
+User.create!(name:  "Aki",
+            email: "aki@example.com",
+            password:              "foobar",
+            password_confirmation: "foobar")
