@@ -13,6 +13,13 @@ class VideopostsController < ApplicationController
     end
   end
 
+  def show
+    @videopost = Videopost.find_by(id: params[:id])
+    @user = @videopost.user
+    @likes_count = Like.where(videopost_id: @videopost.id).count
+  end
+
+
   def destroy
     @videopost.destroy
     flash[:success] = "Videopost deleted"
