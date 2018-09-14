@@ -16,7 +16,7 @@
     Posted <%= time_ago_in_words(videopost.created_at) %> ago.
     <% if current_user?(videopost.user) %>
       <%= link_to "delete", videopost, method: :delete,
-                                       data: { confirm: "You sure?" } %>
+                                       data: { confirm: "本当に削除しますか?" } %>
     <% end %>
   </span>
 </li>
