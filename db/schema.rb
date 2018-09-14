@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_13_040230) do
+ActiveRecord::Schema.define(version: 2018_09_14_011802) do
 
   create_table "follows", force: :cascade do |t|
     t.string "followable_type", null: false

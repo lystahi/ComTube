@@ -12,11 +12,18 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
-
-  resources :videoposts, only:[:create, :destroy]
+  resources :videoposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
 
   get "users/:id/likes", to: "users#likes"
   post "likes/:videopost_id/create" => "likes#create"
   post "likes/:videopost_id/destroy" => "likes#destroy"
+
+  resources :comments,except: [:index,:show] do
+   member do
+    get :reply
+   end
+  end
+
+
 end

@@ -17,6 +17,7 @@ class VideopostsController < ApplicationController
     @videopost = Videopost.find_by(id: params[:id])
     @user = @videopost.user
     @likes_count = Like.where(videopost_id: @videopost.id).count
+    @comment = @post.comments.build
   end
 
 
