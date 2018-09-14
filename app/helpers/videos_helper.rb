@@ -15,7 +15,7 @@ module VideosHelper
   require 'net/http'
 
   # Regex to find YouTube's and Vimeo's video ID
-  YOUTUBE_REGEX = %r(^(http[s]*:\/\/)?(www.)?(youtube.com|youtu.be)\/(watch\?v=){0,1}([a-zA-Z0-9_-]{11}))
+  YOUTUBE_REGEX = %r(^(http[s]*:\/\/)?(www.)?([m.]youtube.com|youtu.be)\/(watch\?v=){0,1}([a-zA-Z0-9_-]{11}))
   VIMEO_REGEX = %r(^https?:\/\/(?:.*?)\.?(vimeo)\.com\/(\d+).*$)
 
   # Finds YouTube's video ID from given URL or [nil] if URL is invalid
