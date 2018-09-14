@@ -11,7 +11,6 @@
     <% end %>
   <% end %>
   <%= @likes_count %>
-
   <span class="timestamp">
     Posted <%= time_ago_in_words(videopost.created_at) %> ago.
     <% if current_user?(videopost.user) %>
