@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-        sessions: 'users/sessions'
+        sessions: 'users/sessions',
+        omniauth_callbacks: 'users/omniauth_callbacks'
       }
   root 'static_pages#home'
   get  '/help',    to: 'static_pages#help'
@@ -24,6 +25,4 @@ Rails.application.routes.draw do
     get :reply
    end
   end
-
-
 end
