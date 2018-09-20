@@ -252,6 +252,7 @@ input {
 /* videoposts */
 
 .posts-index-item {
+  position: relative;
   z-index: 5;
 }
 
@@ -269,6 +270,7 @@ input {
   .content {
     display: block;
     margin-left: 60px;
+    position: relative;
     z-index: 1;
     img {
       display: block;
@@ -313,6 +315,7 @@ span.picture {
 .user-tabs {
   list-style: none;
   overflow: hidden;
+  position: relative;
   z-index: 10;
 }
 
@@ -321,6 +324,7 @@ span.picture {
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
+  position: relative;
   z-index: 10;
 }
 
@@ -345,6 +349,7 @@ span.picture {
 .videopost_content {
   width: 100%;
   padding-top: 56.25%;
+  position: relative;
   z-index: 1;
 }
 .videopost_content iframe {
