@@ -1,10 +1,6 @@
 <% if @feed_items.any? %>
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <ol class="videoposts">
-          <%= render @feed_items %>
-        </ol>
-        <%= will_paginate @feed_items %>
-      </div>
-    </div>
+  <ol class="videoposts">
+    <%= render @feed_items %>
+  </ol>
+  <%= will_paginate @feed_items %>
 <% end %>
