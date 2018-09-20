@@ -98,7 +98,8 @@ class UsersController < ApplicationController
       # GET   /users/:id/edit
       # PATCH /users/:id
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      redirect_to(root_url) unless
+      (@user)
     end
 
     def admin_user

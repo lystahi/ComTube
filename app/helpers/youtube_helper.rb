@@ -25,10 +25,12 @@ module YoutubeHelper
   end
 
   def find_videos(query)
-    opts = Optimist::options do
-      opt :q, 'Search term', :type => String, :default => query
-      opt :max_results, 'Max results', :type => :int, :default => 10
-    end
+#    opts = Optimist::options do
+#      opt :q, 'Search term', :type => String, :default => query
+#      opt :max_results, 'Max results', :type => :int, :default => 10
+#    end
+
+    opts = {:q=>query, :max_results=>10, :help=>false}
 
     client, youtube = get_service
 
