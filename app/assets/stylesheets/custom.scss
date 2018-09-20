@@ -265,6 +265,7 @@ input {
   .content {
     display: block;
     margin-left: 60px;
+    z-index: 0;
     img {
       display: block;
       padding: 5px 0;
@@ -308,6 +309,7 @@ span.picture {
 .user-tabs {
   list-style: none;
   overflow: hidden;
+  z-index: 10;
 }
 
 .user-tabs {
@@ -338,6 +340,7 @@ span.picture {
 .videopost_content {
   width: 100%;
   padding-top: 56.25%;
+  z-index: 0;
 }
 .videopost_content iframe {
   position: relative;

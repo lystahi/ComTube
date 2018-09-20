@@ -16,9 +16,7 @@
         <div class="post-user-name">
           <%= link_to(videopost.user.name, "/users/#{videopost.user.id}") %>
         </div>
-          <span class="videopost_content">
-            <%= link_to(get_video_iframe(videopost.content), "/posts/#{videopost.id}") %>
-          </span>
+          <span class="videopost_content"><%= link_to(get_video_iframe(videopost.content), "/posts/#{videopost.id}") %></span>
       </div>
     <% end %>
   </div>
