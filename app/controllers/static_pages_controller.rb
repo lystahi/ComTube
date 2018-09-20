@@ -10,6 +10,9 @@ class StaticPagesController < ApplicationController
   def help
   end
 
+  def privacy_policy
+  end
+
   def search
     @video_ids = view_context.find_videos(params[:search])
   end
