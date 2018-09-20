@@ -334,3 +334,13 @@ span.picture {
   padding: 16px 30px;
   color: #afb6bf;
 }
+
+.videopost_content {
+  width: 100%;
+  padding-top: 56.25%;
+}
+.videopost_content iframe {
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+}

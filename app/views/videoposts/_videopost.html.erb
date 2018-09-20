@@ -1,7 +1,7 @@
 <% if videopost.content.present? %>
 <li id="videopost-<%= videopost.id %>">
   <span class="user"><%= link_to videopost.user.name, videopost.user %></span>
-  <span class="content"><%= get_video_iframe(videopost.content) %></span>
+  <span class="videopost_content"><%= get_video_iframe(videopost.content) %></span>
   <% if Like.find_by(user_id: current_user.id, videopost_id: videopost.id) %>
     <%= link_to("/likes/#{videopost.id}/destroy", {method: "post"}) do %>
       <span class="fa fa-heart like-btn-unlike"></span>
