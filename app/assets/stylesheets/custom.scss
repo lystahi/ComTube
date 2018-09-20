@@ -251,6 +251,10 @@ input {
 
 /* videoposts */
 
+.posts-index-item {
+  z-index: 5;
+}
+
 .videoposts {
   list-style: none;
   padding: 0;
@@ -265,7 +269,7 @@ input {
   .content {
     display: block;
     margin-left: 60px;
-    z-index: 0;
+    z-index: 1;
     img {
       display: block;
       padding: 5px 0;
@@ -317,6 +321,7 @@ span.picture {
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
+  z-index: 10;
 }
 
 .user-tabs li {
@@ -340,7 +345,7 @@ span.picture {
 .videopost_content {
   width: 100%;
   padding-top: 56.25%;
-  z-index: 0;
+  z-index: 1;
 }
 .videopost_content iframe {
   position: relative;
