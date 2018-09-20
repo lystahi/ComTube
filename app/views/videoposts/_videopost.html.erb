@@ -13,7 +13,7 @@
   <% end %>
   <%= @likes_count %>
   <span class="timestamp">
-   <%= time_ago_in_words(videopost.created_at) %> に投稿
+   <%= time_ago_in_words(videopost.created_at) %> 前に投稿
     <% if current_user?(videopost.user) %>
       <%= link_to "delete", videopost, method: :delete,
                                        data: { confirm: "本当に削除しますか?" } %>
