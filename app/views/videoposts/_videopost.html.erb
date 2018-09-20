@@ -1,3 +1,4 @@
+<% if videopost.content.present? %>
 <li id="videopost-<%= videopost.id %>">
   <span class="user"><%= link_to videopost.user.name, videopost.user %></span>
   <span class="content"><%= get_video_iframe(videopost.content) %></span>
@@ -19,3 +20,4 @@
     <% end %>
   </span>
 </li>
+<% end %>
