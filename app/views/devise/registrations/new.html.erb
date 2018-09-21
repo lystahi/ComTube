@@ -1,5 +1,5 @@
 <h2>Sign up</h2>
-<% if false %>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   <%= render 'shared/error_messages', object: f.object %>
@@ -32,5 +32,5 @@
   </div>
 
 <% end %>
-<% end %>
+
 <%= render "devise/shared/links" %>
