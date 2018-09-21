@@ -28,6 +28,15 @@ class VideopostsController < ApplicationController
 
   private
 
+    # ユーザーのログインを確認する
+    def logged_in_user
+      unless user_signed_in?
+        #store_location
+        flash[:danger] = "Please log in."
+        redirect_to new_user_session_path
+      end
+    end
+
     def videopost_params
       params.require(:videopost).permit(:content)
     end
