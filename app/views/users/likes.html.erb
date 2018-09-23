@@ -4,6 +4,9 @@
       <h2><%= @user.name %></h2>
     </div>
 
+    <div class="col-md-8">
+      <%= render 'follow_form' if user_signed_in? %>
+
     <ul class="user-tabs">
       <li><%= link_to("投稿", "/users/#{@user.id}") %></li>
       <li class="active"><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
