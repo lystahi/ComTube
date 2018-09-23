@@ -103,6 +103,7 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.1)
     google-api-client (0.7.0)
       addressable (>= 2.3.2)
       autoparse (>= 0.3.3)
@@ -278,6 +279,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
+  google-analytics-rails (= 1.1.1)
   google-api-client (= 0.7)
   jbuilder (~> 2.5)
   jquery-rails

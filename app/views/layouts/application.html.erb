@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= analytics_init if GoogleAnalytics.valid_tracker? %>
     <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
@@ -10,7 +11,7 @@
      <!-- FontAwesomeを読み込むlinkタグ -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-     
+
     <%= render 'layouts/shim' %>
   </head>
   <body>
