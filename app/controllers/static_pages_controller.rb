@@ -15,5 +15,6 @@ class StaticPagesController < ApplicationController
 
   def search
     @video_ids = view_context.find_videos(params[:search])
+    @videopost = Videopost.new
   end
 end
