@@ -30,7 +30,7 @@ module YoutubeHelper
 #      opt :max_results, 'Max results', :type => :int, :default => 10
 #    end
 
-    opts = {:q=>query, :max_results=>10, :help=>false}
+    opts = {:q=>query, :max_results=>15, :help=>false}
 
     client, youtube = get_service
 
