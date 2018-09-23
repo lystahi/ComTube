@@ -23,6 +23,8 @@ gem 'retriable', '~> 2.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
+gem 'google-analytics-rails', '1.1.1'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
