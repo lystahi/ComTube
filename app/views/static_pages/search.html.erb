@@ -1,5 +1,12 @@
 <% if @video_ids.present? %>
   <% @video_ids.each do | video_id | %>
     <iframe id="ytplayer" type="text/html" width="320" height="195" src="https://www.youtube.com/embed/<%= video_id %>?autoplay=1&origin=http://localhost:3000/" frameborder="0"></iframe>
+    <%= form_for(@videopost) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="field">
+        <%= f.hidden_field :content, value: "https://www.youtube.com/watch?v=#{ video_id }" %>
+      </div>
+      <%= f.submit "Videopostに追加する！", class: "btn btn-primary" %>
+    <% end %>
   <% end %>
 <% end %>
