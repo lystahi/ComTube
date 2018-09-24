@@ -354,6 +354,7 @@ span.picture {
 }
 .videopost_content iframe {
   position: relative;
+  z-index: 20
   width: 100% !important;
   height: 100% !important;
 }
